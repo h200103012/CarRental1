@@ -21,7 +21,9 @@
         android:id="@+id/imageView"
         android:layout_width="411dp"
         android:layout_height="392dp"
+        android:layout_marginTop="132dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gelik"
@@ -44,4 +46,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="41dp"
+        android:text="CATALOG"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
