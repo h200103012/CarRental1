@@ -1,5 +1,6 @@
 package com.example.carrental
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,4 +13,6 @@ class discountFragment: Fragment(){
     ): View? {
         return inflater.inflate(R.layout.skydka, container, false)
     }
+
+
 }
