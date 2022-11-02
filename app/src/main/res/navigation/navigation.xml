@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeFragment">
 
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.carrental.welcomeFragment"
+        android:label="welcomeFragment" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.carrental.registrationFragment"
+        android:label="registrationFragment" />
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.carrental.catalogFragment"
+        android:label="catalogFragment" />
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.carrental.faqFragment"
+        android:label="faqFragment" />
+    <fragment
+        android:id="@+id/discountFragment"
+        android:name="com.example.carrental.discountFragment"
+        android:label="discountFragment" />
 </navigation>
