@@ -3,7 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#222222">
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:fontFamily="@font/qanelas"
+        android:hint="Birth date"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textColor="#D6D6D6"
+        android:textColorHint="#979797"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/qanelas"
+        android:text="I am agree"
+        android:textColor="#D6D6D6"
+        android:textColorHint="#979797"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:layout_editor_absoluteX="86dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -12,28 +44,16 @@
         android:layout_marginStart="100dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:fontFamily="@font/qanelas"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
+        android:textColor="#D6D6D6"
+        android:textColorHint="#979797"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="84dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        tools:layout_editor_absoluteY="180dp" />
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -43,56 +63,61 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:fontFamily="@font/qanelas"
         android:hint="Phone number"
         android:inputType="phone"
         android:textAlignment="center"
+        android:textColor="#D6D6D6"
+        android:textColorHint="#979797"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
-        android:hint="Birthday date"
-        android:inputType="date"
+        android:fontFamily="@font/qanelas"
+        android:hint="password"
+        android:inputType="textPassword"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#979797"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="34dp"
+        android:fontFamily="@font/qanelas"
         android:text="Registation"
-        android:textSize="30sp"
+        android:textColor="#D6D6D6"
+        android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am agree"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        tools:layout_editor_absoluteX="101dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/qanelas"
         android:text="Confirm"
-        app:backgroundTint="#FD730808"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="408dp" />
+        android:textColor="#C6C6C6"
+        app:backgroundTint="#6A6A6A"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="497dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

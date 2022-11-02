@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     class Dice(val numSides: Int) {
 
         fun roll(): Int {
-            return (1..100).random()
+            return (10..20).random()
         }
     }
 
@@ -41,16 +41,7 @@ class MainActivity : AppCompatActivity() {
 
 
         // Determine which drawable resource ID to use based on the dice roll
-        val drawableResource = when (diceRoll) {
-            1 -> R.drawable.random_1
-            2 -> R.drawable.random_2
-            3 -> R.drawable.random_3
-            4 -> R.drawable.random_4
-            5 -> R.drawable.random_5
-            6 -> R.drawable.random_6
-            7 -> R.drawable.random_7
-            else -> R.drawable.random_8
-        }
+        val drawableResource = R.drawable.random_1
 
         // Update the ImageView with the correct drawable resource ID
         diceImage.setImageResource(drawableResource)

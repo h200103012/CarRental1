@@ -3,32 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#222222">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="110dp"
         android:layout_marginEnd="175dp"
+        android:fontFamily="@font/qanelas"
         android:text="FAQ"
         android:textAlignment="center"
+        android:textColor="#DCDCDC"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="50dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:text="-Hello, we are CarRent
-            -Our address: Tole Bi Turgut Ozala
-
-
-
-
-"
+        android:fontFamily="@font/qanelas"
+        android:text="-Hello, we are CarRent                      -Our address: Tole Bi Turgut Ozala     "
+        android:textColor="#E8E8E8"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
