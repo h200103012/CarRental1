@@ -43,6 +43,7 @@
         android:fontFamily="@font/qanelas"
         android:text="CATALOG"
         android:textAlignment="center"
+        android:textColor="#CACACA"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/scrollView2"
         app:layout_constraintHorizontal_bias="0.625"

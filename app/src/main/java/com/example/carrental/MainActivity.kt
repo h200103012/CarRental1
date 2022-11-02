@@ -50,6 +50,5 @@ class MainActivity : AppCompatActivity() {
         diceImage.contentDescription = diceRoll.toString()
     }
 
-
 }
 
