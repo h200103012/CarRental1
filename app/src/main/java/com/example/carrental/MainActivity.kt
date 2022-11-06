@@ -9,41 +9,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var drawerLayout: DrawerLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.skydka)
-
-        val rollButton: Button = findViewById(R.id.button)
-        rollButton.setOnClickListener { rollDice() }
-        rollDice()
+        setContentView(R.layout.activity_main)
     }
-
-
-    class Dice(val numSides: Int) {
-
-        fun roll(): Int {
-            return (10..20).random()
-        }
-    }
-
-
-    private fun rollDice() {
-
-        val dice = Dice(8)
-        val diceRoll = dice.roll()
-        val diceImage: ImageView = findViewById(R.id.imageView2)
-        val resultTextView: TextView = findViewById(R.id.textView6)
-        resultTextView.text = diceRoll.toString()
-
-
-
-        val drawableResource = R.drawable.random_1
-
-        diceImage.setImageResource(drawableResource)
-
-        diceImage.contentDescription = diceRoll.toString()
-    }
-
 }
 
