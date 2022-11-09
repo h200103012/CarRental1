@@ -3,26 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/homeFragment">
 
-    <fragment
-        android:id="@+id/welcomeFragment"
-        android:name="com.example.carrental.welcomeFragment"
-        android:label="welcomeFragment"
-        tools:layout="@layout/activity_main">
-        <action
-            android:id="@+id/action_welcomeFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_catalogFragment"
-            app:destination="@id/catalogFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_faqFragment"
-            app:destination="@id/faqFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_discountFragment"
-            app:destination="@id/discountFragment" />
-    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.carrental.registrationFragment"
@@ -43,4 +25,22 @@
         android:name="com.example.carrental.discountFragment"
         android:label="discountFragment"
         tools:layout="@layout/skydka"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.carrental.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_discountFragment"
+            app:destination="@id/discountFragment" />
+    </fragment>
 </navigation>
