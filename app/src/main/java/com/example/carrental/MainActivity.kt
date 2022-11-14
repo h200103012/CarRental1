@@ -2,9 +2,11 @@ package com.example.carrental
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.carrental.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.Calatog -> replaceFragment(catalogFragment())
-                R.id.Help -> replaceFragment(faqFragment())
+                R.id.Account -> replaceFragment(loginFragment())
 
                 else ->{
 
@@ -48,4 +50,5 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 }
