@@ -13,5 +13,6 @@
     <string name="password">password</string>
     <string name="register">REGISTER</string>
     <string name="i_m_not_a_robot">I\'m not a robot</string>
+    <string name="add">add</string>
 
 </resources>
