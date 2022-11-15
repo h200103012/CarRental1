@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.Calatog -> replaceFragment(catalogFragment())
                 R.id.Account -> replaceFragment(loginFragment())
 
+
+
                 else ->{
 
 
