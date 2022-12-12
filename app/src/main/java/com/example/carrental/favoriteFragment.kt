@@ -1,60 +1,65 @@
 package com.example.carrental
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carrental.R.layout.*
+import com.example.carrental.adapter.FavAdapter
+import com.example.carrental.databinding.FragmentFavoriteBinding
+import com.example.carrental.model.FavModel
+import kotlinx.android.synthetic.main.catalog.*
 
 
-class favoriteFragment : AppCompatActivity() {
-    private var viewManager = LinearLayoutManager(this)
-    private lateinit var viewModel: MainViewModel
-    private lateinit var mainrecycler: RecyclerView
-    private lateinit var but: Button
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.favorite)
-        mainrecycler = findViewById(R.id.recycler)
-        val application = requireNotNull(this).application
-        val factory = MainViewModelFactory()
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        but = findViewById(R.id.button)
-        but.setOnClickListener {
-            addData()
+
+class favoriteFragment : Fragment(R.layout.fragment_favorite) {
+    lateinit var binding: FragmentFavoriteBinding
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: FavAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentFavoriteBinding.inflate(layoutInflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+    }
+
+
+    private fun init() {
+        val viewModel = ViewModelProvider(this).get(favoriteViewModel::class.java)
+        viewModel.initDatabase()
+        recyclerView = binding.rvFaves
+        adapter = FavAdapter()
+        recyclerView.adapter = adapter
+        viewModel.getAllFaves().observe(viewLifecycleOwner) { listFaves ->
+            listFaves.asReversed()
+            adapter.setList(listFaves)
         }
-
-        initialiseAdapter()
-    }
-    private fun initialiseAdapter(){
-        mainrecycler.layoutManager = viewManager
-        observeData()
-    }
-
-    fun observeData(){
-        viewModel.lst.observe(this, Observer{
-            Log.i("data",it.toString())
-            mainrecycler.adapter= NoteRecyclerAdapter(viewModel, it, this)
-        })
-    }
-
-
-    fun addData(){
-        var txtplce = findViewById<EditText>(R.id.favoriteMark)
-        var title=txtplce.text.toString()
-        if(title.isNullOrBlank()){
-            Toast.makeText(this,"Enter value!", Toast.LENGTH_LONG).show()
-        }else{
-            var blog= Blog(title)
-            viewModel.add(blog)
-            txtplce.text.clear()
-            mainrecycler.adapter?.notifyDataSetChanged()
+//
+        binding.btnNext.setOnClickListener {
+            APP.navController.navigate(R.id.action_favoriteFragment_to_addFavFragment)
         }
+    }
 
+
+    companion object{
+        fun clickFav(favModel: FavModel){
+            val bundle = Bundle()
+            bundle.putSerializable("fav",favModel)
+            APP.navController.navigate(R.id.action_favoriteFragment_to_detailFragment,bundle)
+        }
     }
 }
+
+

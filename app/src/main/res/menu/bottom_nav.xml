@@ -2,13 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Home"
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_baseline_home_24"/>
     <item android:title="Calatog"
-        android:id="@+id/Calatog"
+        android:id="@+id/CatalogActivity"
         android:icon="@drawable/ic_baseline_car_rental_24"/>
-    <item android:title="Account"
-        android:id="@+id/Account"
-        android:icon="@drawable/ic_baseline_account_circle_24"/>
+    <item android:title="About Us"
+        android:id="@+id/faqFragment"
+        android:icon="@drawable/ic_baseline_help_24"/>
+    <item android:title="Favourites"
+        android:id="@+id/favoriteFragment"
+        android:icon="@drawable/ic_baseline_favorite_24"/>
 
 </menu>

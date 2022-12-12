@@ -14,5 +14,9 @@
     <string name="register">REGISTER</string>
     <string name="i_m_not_a_robot">I\'m not a robot</string>
     <string name="add">add</string>
+    <string name="enter_your_favorite_carbrand">Enter your favorite carbrand</string>
+    <string name="repassword">repassword</string>
+    <string name="username">username</string>
+    <string name="password_again">password again</string>
 
 </resources>

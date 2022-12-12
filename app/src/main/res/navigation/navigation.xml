@@ -5,11 +5,7 @@
     android:id="@+id/navigation"
     app:startDestination="@id/homeFragment">
 
-    <fragment
-        android:id="@+id/registrationFragment"
-        android:name="com.example.carrental.registrationFragment"
-        android:label="registrationFragment"
-        tools:layout="@layout/registration"/>
+
     <fragment
         android:id="@+id/catalogFragment"
         android:name="com.example.carrental.catalogFragment"
@@ -21,34 +17,73 @@
         android:label="faqFragment"
         tools:layout="@layout/help"/>
     <fragment
-        android:id="@+id/discountFragment"
-        android:name="com.example.carrental.discountFragment"
-        android:label="discountFragment"
-        tools:layout="@layout/skydka"/>
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.carrental.HomeFragment"
         android:label="fragment_home2"
-        tools:layout="@layout/fragment_home2" >
+        tools:layout="@layout/home_fragment" >
         <action
             android:id="@+id/action_homeFragment_to_faqFragment"
             app:destination="@id/faqFragment" />
         <action
             android:id="@+id/action_homeFragment_to_catalogFragment"
             app:destination="@id/catalogFragment" />
+
+
         <action
-            android:id="@+id/action_homeFragment_to_discountFragment"
-            app:destination="@id/discountFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_homeFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
     </fragment>
+
+
+
+
+
+
+
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.carrental.loginFragment"
-        android:label="loginFragment" >
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.carrental.favoriteFragment"
+        android:label="fragment_favorite" >
         <action
-            android:id="@+id/action_loginFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            android:id="@+id/action_favoriteFragment_to_addFavFragment"
+            app:destination="@id/addFavFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/addFavFragment"
+        android:name="com.example.carrental.screens.addFav.AddFavFragment"
+        android:label="fragment_add_fav"
+        tools:layout="@layout/fragment_add_fav" >
+        <action
+            android:id="@+id/action_addFavFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.carrental.screens.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+
+
+    <activity
+        android:id="@+id/CatalogActivity"
+        android:name="com.example.carrental.CatalogActivity"
+        android:label="Activity_Catalog"
+        tools:layout="@layout/activity_catalog"
+        />
+
+
+
+
 </navigation>
